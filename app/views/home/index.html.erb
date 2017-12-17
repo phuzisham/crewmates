@@ -1,3 +1,13 @@
 <body class="mainBack">
-
+  <% if @users.any? %>
+    <div class="card col-md-5">
+      <h4>Available Crew:</h4>
+      <hr>
+      <% @users.each do |u| %>
+        <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
+        <li><%= u.username %></li>
+        <br>
+      <% end %>
+    </div>
+  <% end %>
 </body>
