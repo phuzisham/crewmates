@@ -2,13 +2,42 @@
 
 // ___ General ___ //
 
+header a {
+  color: #ac7c60;
+}
+
 li {
   list-style-type: none;
+}
+
+.formBack {
+  background-color: #DDE4DF;
+  border-style: none;
+}
+
+.card {
+  border-style: inset;
+  color: #fff;
+  border-radius: 23px;
+  padding: 23px;
+  vertical-align: middle;
+  margin-bottom: 90px;
+  background-color: rgba(76, 86, 96, 0.7);
 }
 
 // ___Home Index___ //
 
 #homeBack {
+  background: url("/images/main.jpg") no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// ___Devise Register___ //
+
+#regBack {
   background: url("/images/main.jpg") no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
