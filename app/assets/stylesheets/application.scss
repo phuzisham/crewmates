@@ -2,6 +2,18 @@
 
 // ___ General ___ //
 
+.round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: auto;
+    img { width: 100% }
+}
+
 #crewMates a {
   font-family: 'Lobster Two', cursive;
   font-size: 30px;
@@ -33,6 +45,10 @@ li {
   vertical-align: middle;
   margin-bottom: 90px;
   background-color: rgba(76, 86, 96, 0.7);
+}
+
+.alertCard {
+  max-width: 33%;
 }
 
 // ___Home Index___ //

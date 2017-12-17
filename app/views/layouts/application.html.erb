@@ -16,6 +16,7 @@
       </div>
       <ul class="navbar-nav">
         <% if current_user %>
+          <div class='round-image-50'><%= image_tag(current_user.avatar.url(:thumb)) %></div>
           <li class="nav-item"><%= link_to current_user.username, edit_user_registration_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
         <% else %>
@@ -36,7 +37,7 @@
   <body>
     <div class='container'>
       <% flash.each do |key, value| %>
-        <div class='alert alert-info alert-dismissible fade show' role='alert'>
+        <div class='alert alert-dismissible fade show card alertCard' role='alert'>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <li aria-hidden="true">&times;</li>
           </button>
