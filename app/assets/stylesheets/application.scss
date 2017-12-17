@@ -2,8 +2,18 @@
 
 // ___ General ___ //
 
+#crewMates a {
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+  margin: -10px;
+}
+
 a {
   color: #ac7c60;
+}
+
+a:hover {
+  color: #9aa9af;
 }
 
 li {
