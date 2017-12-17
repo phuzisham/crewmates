@@ -1,5 +1,5 @@
 <body class="mainBack">
-  <div class=" card col-md-6">
+  <div class=" card col-md-4">
     <h3>Edit Account Info: <%= current_user.username %></h3>
     <hr>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
@@ -7,77 +7,58 @@
 
     <div class="form-group">
       <%= f.label :username, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.text_field :username, class: 'form-control formBack'  %>
-      </div>
+      <%= f.text_field :username, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :name, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.text_field :name, class: 'form-control formBack'  %>
-      </div>
+      <%= f.text_field :name, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :email, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.email_field :email, class: 'form-control formBack'  %>
-      </div>
+      <%= f.email_field :email, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :home_country, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.text_field :home, class: 'form-control formBack'  %>
-      </div>
+      <%= f.text_field :home, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :age, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.number_field :age, class: 'form-control formBack'  %>
-      </div>
+      <%= f.number_field :age, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :years_of_experience, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <%= f.number_field :experience, class: 'form-control formBack'  %>
-      </div>
+      <%= f.number_field :experience, class: 'form-control formBack'  %>
     </div>
 
     <div class="form-group">
       <%= f.label :avatar, class: 'control-label'  %>
       <%= f.file_field :avatar %>
-      <div class="col-sm-9">
     </div>
 
     <div class="form-group">
       <%= f.label :password, class: 'control-label'  %>
-      <div class="col-sm-9">
-        <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control formBack' %>
-      </div>
+      <i>(leave blank if not changing)</i>
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control formBack' %>
     </div>
 
     <div class="form-group">
       <%= f.label :password_confirmation, class: 'control-label' %>
-      <div class="col-sm-9">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control formBack' %>
-      </div>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control formBack' %>
     </div>
 
     <div class="form-group">
       <%= f.label :current_password, class: 'control-label' %>
-      <div class="col-sm-9">
-        <i>(we need your current password to confirm your changes)</i>
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control formBack' %>
-      </div>
+      <i>(required)</i>
+      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control formBack' %>
     </div>
 
     <div class="form-group">
-      <div class="actions col-sm-offset-2 col-sm-9">
+      <div class="actions">
         <%= f.submit "Update", class: "btn btn-info" %>
       </div>
     </div>
