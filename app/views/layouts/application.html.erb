@@ -8,7 +8,39 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <nav class="navbar-brand"><%= link_to 'CrewMates', root_path, class: 'nav-link' %></nav>
+      <ul class="navbar-nav">
+        <% if current_user %>
+          <li class="nav-item"><%= link_to current_user.username, edit_user_registration_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Register', new_user_registration_path, class: 'nav-link'  %></li>
+        <% end %>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <%= form_tag(root_path, :method => "get", :class => "form-inline my-2 my-lg-0") do %>
+          <%= text_field_tag :search, params[:search],  :class => "form-control mr-sm-2" %>
+          <%= submit_tag "Search", :class => "btn btn-outline-success my-2 my-sm-0" %>
+        <% end %>
+      </div>
+      </ul>
+    </nav>
+  </header><br>
+
   <body>
-    <%= yield %>
-  </body>
+    <div class='container'>
+      <% flash.each do |key, value| %>
+        <div class='alert alert-info alert-dismissible fade show' role='alert'>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <li aria-hidden="true">&times;</li>
+          </button>
+          <%= value %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+</body>
 </html>
