@@ -1,1 +1,17 @@
 @import 'bootstrap';
+
+// ___ General ___ //
+
+li {
+  list-style-type: none;
+}
+
+// ___Home Index___ //
+
+#homeBack {
+  background: url("/images/main.jpg") no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
