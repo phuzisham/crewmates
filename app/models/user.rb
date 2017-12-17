@@ -8,7 +8,11 @@ class User < ApplicationRecord
   validates :username, :uniqueness => true
 
   validates_confirmation_of :password
-  
+
+  scope :all_users_except, -> (current_user) {
+    where.not(id: current_user)
+  }
+
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   # Include default devise modules. Others available are:

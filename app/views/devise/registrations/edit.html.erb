@@ -39,7 +39,17 @@
       <%= f.label :avatar, class: 'control-label'  %>
       <%= f.file_field :avatar %>
     </div>
-
+    <br>
+    <div class="form-group">
+      <% options = ['Crew', 'Captain'] %>
+      <%= f.select :account_type,  options %>
+    </div>
+    <br>
+    <div class="field">
+      <% options = ['Available', 'Busy'] %>
+      <%= f.select :available,  options %>
+    </div>
+    <br>
     <div class="form-group">
       <%= f.label :password, class: 'control-label'  %>
       <i>(leave blank if not changing)</i>
