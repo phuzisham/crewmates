@@ -2,7 +2,7 @@
 
 // ___ General ___ //
 
-header a {
+a {
   color: #ac7c60;
 }
 
@@ -27,7 +27,7 @@ li {
 
 // ___Home Index___ //
 
-#homeBack {
+.mainBack {
   background: url("/images/main.jpg") no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
