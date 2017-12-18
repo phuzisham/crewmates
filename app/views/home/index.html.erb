@@ -1,31 +1,29 @@
-<body class="mainBack">
-  <div class="row">
-    <% if @crew.any? %>
+<div class="row">
+  <% if @crew.any? %>
+  <div class="col-md-6">
+    <div class="card">
+      <h4>Available Crew:</h4>
+      <hr>
+      <% @crew.each do |u| %>
+        <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
+        <li><%= u.username %></li>
+        <br>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+
+  <% if @captains.any? %>
     <div class="col-md-6">
       <div class="card">
-        <h4>Available Crew:</h4>
+        <h4>Available Positions:</h4>
         <hr>
-        <% @crew.each do |u| %>
+        <% @captains.each do |u| %>
           <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
           <li><%= u.username %></li>
           <br>
         <% end %>
       </div>
     </div>
-    <% end %>
-
-    <% if @captains.any? %>
-      <div class="col-md-6">
-        <div class="card">
-          <h4>Available Positions:</h4>
-          <hr>
-          <% @captains.each do |u| %>
-            <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
-            <li><%= u.username %></li>
-            <br>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</body>
+  <% end %>
+</div>
