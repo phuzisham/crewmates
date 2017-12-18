@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-describe User, 'validation' do
+RSpec.describe User, type: :model do
+  before(:each) do
+    FactoryBot.create(:user)
+  end
+
+  it { should validate_presence_of :email }
   it { should validate_presence_of :username }
+  it { should validate_presence_of :password }
 end
