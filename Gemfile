@@ -54,6 +54,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'simplecov', require: false
+  gem 'rails-controller-testing'
   # gem 'dotenv-rails'
   # gem 'database_cleaner'
 end
