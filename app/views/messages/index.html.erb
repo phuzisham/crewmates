@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-md-6">
-    <div class="card">
+  <div id="messDiv" class="col-md-6">
+    <div id="messCard" class="card">
       <h4>Messages: </h4>
       <% @messages.each do |message| %>
         <% if message.content %>
@@ -21,9 +21,9 @@
       <% end %>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="card">
-      <%= form_for [@conversation, @message] do |f| %>
+  <div id="writeDiv" class="col-md-6">
+    <div id="textCard" class="card">
+      <%= form_for [@conversation, @message], remote: true do |f| %>
         <%= f.text_area :content, :rows => 10, style: 'width:100%;', class: 'formBack' %>
         <%= f.hidden_field :user_id, value: current_user.id %>
         <div>

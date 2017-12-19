@@ -5,7 +5,7 @@ module MailHelper
     userConv.each do |c|
       c.messages.unread.each do |m|
         if m.user_id != user.id
-          userMessages = userMessages.push(c)
+          userMessages = userMessages.push(m)
         end
       end
     end
