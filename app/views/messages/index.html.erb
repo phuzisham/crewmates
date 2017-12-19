@@ -1,28 +1,35 @@
-<div class=”ui segment”>
-  <% @messages.each do |message| %>
-    <% if message.content %>
-      <% user = User.find(message.user_id) %>
-      <div class=”item”>
-        <div class=”content”>
-          <div class=”header”><strong><%= user.username %></strong> <%= message.message_time %></div>
-            <div class=”list”>
-              <div class=”item”>
-              <i class=”right triangle icon”></i>
-              <%= message.content %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <h4>Messages: </h4>
+      <% @messages.each do |message| %>
+        <% if message.content %>
+          <% user = User.find(message.user_id) %>
+          <div class=”item”>
+            <div class=”content”>
+              <small><strong><%= user.username %></strong> <%= message.message_time %></small>
+                <div class=”list”>
+                  <div class=”item”>
+                  <i class=”right triangle icon”></i>
+                  <%= message.content %>
+                  <hr>
+                </div>
+              </div>
             </div>
           </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <%= form_for [@conversation, @message] do |f| %>
+        <%= f.text_area :content, :rows => 10, style: 'width:100%;', class: 'formBack' %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div>
+          <%= f.submit class: 'btn btn-primary'%>
         </div>
-      </div>
-    <% end %>
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<%= form_for [@conversation, @message] do |f| %>
-  <div class=”field”>
-    <%= f.text_area :content %>
-  </div>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>

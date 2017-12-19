@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6">
     <div class="card">
-      <h3>Mailbox</h3>
+      <h3>Your Conversations:</h3>
       <div class=”list”>
         <div class=”item”>
           <% @conversations.each do |conversation| %>
@@ -11,7 +11,7 @@
               <% else %>
                 <% recipient = User.find(conversation.sender_id) %>
               <% end %>
-              <%= link_to recipient.username,   conversation_messages_path(conversation)%>
+              <li><%= link_to recipient.username,   conversation_messages_path(conversation)%></li>
             <% end %>
           <% end %>
         </div>
@@ -20,7 +20,7 @@
   </div>
   <div class="col-md-6">
     <div class="card">
-      <h3>All Users</h3>
+      <h3>Start New Conversation:</h3>
       <div class=”list”>
         <% @users.each do |user| %>
           <% if user.id != current_user.id %>

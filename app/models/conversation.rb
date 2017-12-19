@@ -6,5 +6,11 @@ class Conversation < ApplicationRecord
 
   validates_uniqueness_of :sender_id, :scope => :recipient_id
 
-  scope :between, -> (sender_id, recipient_id) { where(sender_id: sender_id, recipient_id: recipient_id).or(where(sender_id: recipient_id, recipient_id: sender_id)) }
+  scope :between, -> (sender_id, recipient_id) {
+    where(sender_id: sender_id, recipient_id: recipient_id).or(where(sender_id: recipient_id, recipient_id: sender_id))
+  }
+
+  scope :userMessages, -> (user_id) {
+    where(sender_id: user_id).or(where(recipient_id: user_id))
+  }
 end
