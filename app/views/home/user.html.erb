@@ -1,12 +1,20 @@
 <div class="card">
-  <h4><%= @user.name %></h4>
-  <li class='round-image-50'><%= image_tag(@user.avatar.url(:thumb)) %></li>
-  <small><%= @user.username %></small>
-  <br>
-  <p><%= @user.detail %></p>
-  <br>
-  <h5>About Me:</h5>
-  <p>Home Country: <%= @user.home %></p>
-  <p>Age: <%= @user.age %></p>
-  <p>Years of Experience: <%= @user.experience %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <h4><%= @user.name %></h4>
+      <div class="userDet">
+        <%= image_tag(@user.avatar.url(:medium)) %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p>Description:</p>
+      <p><%= @user.detail %></p>
+      <br>
+      <h5>About Me:</h5>
+      <p>Home Country: <%= @user.home %></p>
+      <p>Age: <%= @user.age %></p>
+      <p>Years of Experience: <%= @user.experience %></p>
+      <p>Username: <%= @user.username %></p>
+    </div>
+  </div>
 </div>
