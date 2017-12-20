@@ -11,6 +11,7 @@ User.destroy_all
               password: Faker::Internet.password(6),
               account_type: 'Captain',
               available: 'Available',
+              detail: Faker::Dune.quote,
               avatar: URI.parse(Faker::Avatar.image))
 end
 
@@ -24,6 +25,7 @@ end
               password: Faker::Internet.password(6),
               account_type: 'Crew',
               available: 'Available',
+              detail: Faker::Dune.quote,
               avatar: URI.parse(Faker::Avatar.image))
 end
 

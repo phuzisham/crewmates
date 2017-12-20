@@ -18,7 +18,7 @@
         <% if current_user %>
           <div class='round-image-50'><%= image_tag(current_user.avatar.url(:thumb)) %></div>
           <li class="nav-item"><%= link_to current_user.username, edit_user_registration_path, class: 'nav-link' %></li>
-          <li class="nav-item">
+          <li id="mCount" class="nav-item">
             <%= link_to conversations_path, class: 'nav-link' do %>
               Mailbox (<%= mail_set(current_user) %>)
             <% end %>

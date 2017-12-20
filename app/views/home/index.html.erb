@@ -5,9 +5,16 @@
       <h4>Available Crew:</h4>
       <hr>
       <% @crew.each do |u| %>
-        <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
-        <li><%= u.username %></li>
-        <br>
+        <div class="row">
+          <div class="col-md-3">
+            <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
+            <li><%= u.username %></li>
+          </div>
+          <div class="col-md-9">
+            <li><%= u.detail %></li>
+          </div>
+        </div>
+        <hr>
       <% end %>
     </div>
   </div>
@@ -19,8 +26,15 @@
         <h4>Available Positions:</h4>
         <hr>
         <% @captains.each do |u| %>
-          <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
-          <li><%= u.username %></li>
+          <div class="row">
+            <div class="col-md-3">
+              <li class='round-image-50'><%= image_tag(u.avatar.url(:thumb)) %></li>
+              <li><%= u.username %></li>
+            </div>
+            <div class="col-md-9">
+              <li><%= u.detail %></li>
+            </div>
+          </div>
           <br>
         <% end %>
       </div>

@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @captains = User.all_users_except(current_user)
     @captains = @captains.where(:account_type => 'Captain', :available => 'Available')
   end
+
+  def user
+    @user = User.find(params[:id])
+  end
 end
