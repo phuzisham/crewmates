@@ -627,6 +627,11 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
         1,
         null,
         1,
@@ -645,15 +650,33 @@
         1,
         null,
         1,
-        13,
-        13,
-        13,
+        14,
+        14,
+        14,
         null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/app/models/application_record.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/Phuzisham/Desktop/crewmates/app/models/conversation.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        4,
+        null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/app/helpers/application_helper.rb": [
@@ -663,16 +686,16 @@
       "/Users/Phuzisham/Desktop/crewmates/app/helpers/mail_helper.rb": [
         1,
         1,
-        3,
-        3,
-        3,
-        0,
-        0,
-        0,
+        4,
+        4,
+        4,
+        2,
+        2,
+        1,
         null,
         null,
         null,
-        3,
+        4,
         null,
         null
       ],
@@ -734,14 +757,23 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null
+      ],
+      "/Users/Phuzisham/Desktop/crewmates/spec/models/conversation_spec.rb": [
+
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
+        null,
         1,
         1,
         null,
@@ -760,11 +792,16 @@
         2,
         2,
         2,
+        2,
+        2,
+        null,
+        null,
+        1,
         2,
         2,
         null
       ],
-      "/Users/Phuzisham/Desktop/crewmates/app/models/conversation.rb": [
+      "/Users/Phuzisham/Desktop/crewmates/app/models/message.rb": [
         1,
         1,
         1,
@@ -772,17 +809,15 @@
         1,
         null,
         1,
+        2,
+        null,
         null,
         1,
         0,
         null,
-        null,
-        1,
-        3,
-        null,
         null
       ]
     },
-    "timestamp": 1513874198
+    "timestamp": 1513876943
   }
 }

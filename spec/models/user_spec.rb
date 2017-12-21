@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe User, 'before_validation' do
   user = User.create(:email => 'TeSt@tEsT.com', :username => 'testUser', :password => 'password', :name => 'wILey MaGOo', :home => 'iStANbul' )
+
   it 'will lowcase email' do
     expect(user.email).to(eq('test@test.com'))
   end
@@ -22,4 +23,9 @@ describe User, 'validation' do
   it { should validate_uniqueness_of(:username).ignoring_case_sensitivity }
   it { should validate_presence_of :password }
   it { should validate_confirmation_of :password }
+end
+
+describe User, 'associations' do
+  it { should have_many :conversations }
+  it { should have_many :messages }
 end

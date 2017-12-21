@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   before_validation :normalize_params, on: [:create, :update]
 
+  has_many :conversations, :foreign_key => :sender_id, class_name: Conversation
+  has_many :conversations, :foreign_key => :recipient_id, class_name: Conversation
+
+  has_many :messages, through: :conversations
+
   validates :email, :presence => true
   validates :email, :uniqueness => true
 
