@@ -11,5 +11,8 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe MailHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'returns the number of unread mesages' do
+    user = FactoryBot.create(:user)
+    expect(helper.mail_set(user)).to(eq(0))
+  end
 end
