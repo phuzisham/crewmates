@@ -18,6 +18,10 @@ class User < ApplicationRecord
     where.not(id: current_user)
   }
 
+  scope :search, -> (search_parameter) {
+    where("lower(home) like lower(?) OR lower(name) like lower(?) OR lower(username) like lower(?) OR lower(detail) like lower(?)", "%#{search_parameter}%", "%#{search_parameter}%", "%#{search_parameter}%", "%#{search_parameter}%")
+  }
+
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   # Include default devise modules. Others available are:
