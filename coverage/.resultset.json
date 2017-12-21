@@ -593,6 +593,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         null
@@ -602,6 +604,7 @@
         1,
         1,
         null,
+        1,
         1,
         null,
         1,
@@ -635,9 +638,9 @@
         1,
         null,
         1,
-        4,
-        0,
-        0,
+        6,
+        3,
+        3,
         null,
         null
       ],
@@ -650,8 +653,20 @@
         1,
         null
       ],
-      "/Users/Phuzisham/Desktop/crewmates/app/helpers/home_helper.rb": [
+      "/Users/Phuzisham/Desktop/crewmates/app/helpers/mail_helper.rb": [
         1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/app/controllers/home_controller.rb": [
@@ -661,6 +676,10 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -699,17 +718,18 @@
       "/Users/Phuzisham/Desktop/crewmates/spec/models/user_spec.rb": [
         1,
         null,
-        1,
-        1,
-        4,
+        null,
         null,
         1,
         1,
-        1,
-        1,
+        3,
+        null,
+        2,
+        2,
+        2,
         null
       ]
     },
-    "timestamp": 1513626390
+    "timestamp": 1513814305
   }
 }

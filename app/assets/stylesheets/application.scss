@@ -20,9 +20,14 @@ header {
 }
 
 .userDet {
+  height: 300px;
+  width: 300px;
   border-radius: 23px;
-  width: 100%;
   background-color: #9aa9af;
+}
+
+.userDet img {
+  border-radius: 23px;
 }
 
 #crewMates a {
