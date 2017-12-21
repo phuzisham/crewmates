@@ -7,7 +7,11 @@
           <% user = User.find(message.user_id) %>
           <div class=”item”>
             <div class=”content”>
-              <small><strong><%= user.username %></strong> <%= message.message_time %></small>
+              <% if user == current_user %>
+                <small class="myMess"><strong><%= user.username %></strong> <%= message.message_time %></small>
+              <% else %>
+                <small class="theirMess"><strong><%= user.username %></strong> <%= message.message_time %></small>
+              <% end %>
                 <div class=”list”>
                   <div class=”item”>
                   <i class=”right triangle icon”></i>
