@@ -11,7 +11,11 @@
               <% else %>
                 <% recipient = User.find(conversation.sender_id) %>
               <% end %>
-              <li><%= link_to recipient.username,   conversation_messages_path(conversation)%></li>
+              <li>
+                <%= link_to conversation_messages_path(conversation), class: 'nav-link' do %>
+                  <%= recipient.username %> (<%= mail_count(current_user, recipient) %>)
+                <% end %>
+              </li>
             <% end %>
           <% end %>
         </div>
