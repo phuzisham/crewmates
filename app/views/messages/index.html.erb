@@ -8,9 +8,9 @@
           <div class=”item”>
             <div class=”content”>
               <% if user == current_user %>
-                <small class="myMess"><strong><%= user.username %></strong> <%= message.message_time %></small>
+                <small><strong class="myMess"><%= user.username %></strong> <%= message.message_time %></small>
               <% else %>
-                <small class="theirMess"><strong><%= user.username %></strong> <%= message.message_time %></small>
+                <small><strong class="theirMess"><%= user.username %></strong> <%= message.message_time %></small>
               <% end %>
                 <div class=”list”>
                   <div class=”item”>
