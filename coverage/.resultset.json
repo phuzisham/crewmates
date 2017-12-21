@@ -673,24 +673,6 @@
         1,
         null
       ],
-      "/Users/Phuzisham/Desktop/crewmates/app/models/conversation.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        10,
-        null,
-        null
-      ],
       "/Users/Phuzisham/Desktop/crewmates/app/helpers/application_helper.rb": [
         1,
         null
@@ -761,7 +743,7 @@
         null,
         1,
         1,
-        null,
+        1,
         1,
         1,
         1,
@@ -837,6 +819,24 @@
         null,
         1,
         2,
+        null
+      ],
+      "/Users/Phuzisham/Desktop/crewmates/app/models/conversation.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        10,
+        null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/message_spec.rb": [
@@ -977,6 +977,6 @@
         null
       ]
     },
-    "timestamp": 1513897339
+    "timestamp": 1513897535
   }
 }
