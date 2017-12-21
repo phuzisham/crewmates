@@ -15,6 +15,11 @@
       <p>Age: <%= @user.age %></p>
       <p>Years of Experience: <%= @user.experience %></p>
       <p>Username: <%= @user.username %></p>
+      <% if current_user %>
+        <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%>
+      <% else %>
+        <p>Log in to message me!</p>
+      <% end %>
     </div>
   </div>
 </div>
