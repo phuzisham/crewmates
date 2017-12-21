@@ -650,9 +650,9 @@
         1,
         null,
         1,
-        14,
-        14,
-        14,
+        16,
+        16,
+        16,
         null,
         null
       ],
@@ -778,6 +778,47 @@
         2,
         null
       ],
+      "/Users/Phuzisham/Desktop/crewmates/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Phuzisham/Desktop/crewmates/app/models/message.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/user_spec.rb": [
         1,
         null,
@@ -810,24 +851,8 @@
         2,
         2,
         null
-      ],
-      "/Users/Phuzisham/Desktop/crewmates/app/models/message.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
       ]
     },
-    "timestamp": 1513877364
+    "timestamp": 1513878153
   }
 }
