@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   root :to => 'home#index'
   get '/user/:id' => 'home#user'
-
   resources :conversations do
     resources :messages
   end

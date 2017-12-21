@@ -9,4 +9,12 @@ RSpec.describe HomeController, type: :controller do
       expect(response).to render_template("index")
     end
   end
+
+  describe "GET user" do
+    it "renders the user template" do
+      user = FactoryBot.create(:user)
+      get(:user, params: { id: user.id })
+      expect(response).to render_template("user")
+    end
+  end
 end

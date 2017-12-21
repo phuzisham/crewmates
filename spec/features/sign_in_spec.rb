@@ -12,4 +12,9 @@ describe 'test for sign-in process' do
   it 'will let user sign in' do
     expect(page).to have_content "Signed in successfully."
   end
+
+  it 'will let user sign out' do
+    click_link 'Logout'
+    expect(page).to have_content "Signed out successfully."
+  end
 end
