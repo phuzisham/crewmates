@@ -638,9 +638,9 @@
         1,
         null,
         1,
-        4,
-        1,
-        1,
+        5,
+        5,
+        5,
         null,
         null
       ],
@@ -691,25 +691,29 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        3,
+        3,
+        3,
+        3,
+        null,
+        null
+      ],
+      "/Users/Phuzisham/Desktop/crewmates/spec/features/sign_in_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/helpers/home_helper_spec.rb": [
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         1,
@@ -746,6 +750,6 @@
         null
       ]
     },
-    "timestamp": 1513817560
+    "timestamp": 1513818228
   }
 }

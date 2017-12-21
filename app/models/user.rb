@@ -23,8 +23,8 @@ class User < ApplicationRecord
   private
 
   def normalize_params
-    self.name = name.downcase.titleize
-    self.email = email.downcase
-    self.home = home.downcase.titleize
+    self.name = name.downcase.titleize if attribute_present? 'name'
+    self.email = email.downcase if attribute_present? 'email'
+    self.home = home.downcase.titleize if attribute_present? 'home'
   end
 end
