@@ -12,6 +12,7 @@ describe Message, 'validation' do
 end
 
 describe Message, 'message_time' do
+  User.destroy_all
   user1 = FactoryBot.create(:user)
   user2 = User.create!(:email => 'huh@tEsT.com', :username => 'testUser', :password => 'password', :name => 'wILey MaGOo', :home => 'iStANbul' )
   conv = Conversation.create(:sender_id => user1.id, :recipient_id => user2.id)
