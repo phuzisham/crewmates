@@ -650,9 +650,9 @@
         1,
         null,
         1,
-        16,
-        16,
-        16,
+        18,
+        18,
+        18,
         null,
         null
       ],
@@ -675,7 +675,7 @@
         null,
         null,
         1,
-        4,
+        6,
         null,
         null
       ],
@@ -696,6 +696,19 @@
         null,
         null,
         4,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        null,
+        null,
+        null,
+        2,
         null,
         null
       ],
@@ -763,6 +776,17 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/conversation_spec.rb": [
@@ -811,7 +835,7 @@
         1,
         null,
         1,
-        2,
+        4,
         null,
         null,
         1,
@@ -853,6 +877,6 @@
         null
       ]
     },
-    "timestamp": 1513878153
+    "timestamp": 1513879434
   }
 }

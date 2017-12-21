@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-12-21T09:42:33-08:00">2017-12-21T09:42:33-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-12-21T10:03:54-08:00">2017-12-21T10:03:54-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.74%</span></span>
+    (<span class="covered_percent"><span class="green">98.81%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.5
+         1.53
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>238</b> relevant lines. 
-    <span class="green"><b>235</b> lines covered</span> and
+    <b>253</b> relevant lines. 
+    <span class="green"><b>250</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#2fbce36c70eb7e5127bdb997a510cd17c2952873" class="src_link" title="app/helpers/mail_helper.rb">app/helpers/mail_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>9</td>
-        <td>9</td>
+        <td>27</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>9</td>
         <td>8</td>
         <td>1</td>
-        <td>1.2</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>20</td>
         <td>20</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
@@ -313,9 +313,9 @@
       <tr>
         <td class="strong"><a href="#ce08e548955affd85c56527d02b3527c04d889b7" class="src_link" title="spec/helpers/home_helper_spec.rb">spec/helpers/home_helper_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
-        <td>9</td>
-        <td>9</td>
+        <td>24</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -600,8 +600,8 @@
     <h3>app/helpers/mail_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -688,6 +688,84 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def mail_count(user1, user2)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    userConv = Conversation.userMessages(user1.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    userMessages = [];</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    userConv.each do |c|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      c.messages.unread.each do |m|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        if m.user_id != user1.id &amp;&amp; m.user_id == user2.id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          userMessages = userMessages.push(m)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    return userMessages.count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -827,8 +905,8 @@
           <code class="ruby">  scope :userMessages, -&gt; (user_id) {</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="14">
+          <span class="hits">6</span>
           
           <code class="ruby">    where(sender_id: user_id).or(where(recipient_id: user_id))</code>
         </li>
@@ -906,8 +984,8 @@
           <code class="ruby">  scope :unread, -&gt; {</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
           
           <code class="ruby">    where(&quot;read = false&quot;)</code>
         </li>
@@ -1147,20 +1225,20 @@
           <code class="ruby">  def normalize_params</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="31">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="31">
+          <span class="hits">18</span>
           
           <code class="ruby">    self.name = name.downcase.titleize if attribute_present? &#39;name&#39;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="32">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="32">
+          <span class="hits">18</span>
           
           <code class="ruby">    self.email = email.downcase if attribute_present? &#39;email&#39;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="33">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="33">
+          <span class="hits">18</span>
           
           <code class="ruby">    self.home = home.downcase.titleize if attribute_present? &#39;home&#39;</code>
         </li>
@@ -4757,8 +4835,8 @@
     <h3>spec/helpers/home_helper_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4787,7 +4865,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;returns the number of unread mesages&#39; do</code>
+          <code class="ruby">  it &#39;returns the number of unread mesages for user&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -4817,7 +4895,7 @@
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
@@ -4839,6 +4917,72 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;returns the number of unread mesages for user from specific user&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user1 = FactoryBot.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user2 = User.create!(:email =&gt; &#39;huh@tEsT.com&#39;, :username =&gt; &#39;testUser&#39;, :password =&gt; &#39;password&#39;, :name =&gt; &#39;wILey MaGOo&#39;, :home =&gt; &#39;iStANbul&#39; )</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    conv = Conversation.create(:sender_id =&gt; user1.id, :recipient_id =&gt; user2.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    message = Message.create(:conversation_id =&gt; conv.id, :user_id =&gt; user2.id, :content =&gt; &#39;Some content.&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(helper.mail_count(user1, user2)).to(eq(1))</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(helper.mail_count(user2, user1)).to(eq(0))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
