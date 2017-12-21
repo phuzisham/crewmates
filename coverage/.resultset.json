@@ -766,7 +766,17 @@
         null
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/conversation_spec.rb": [
-
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null
       ],
       "/Users/Phuzisham/Desktop/crewmates/spec/models/user_spec.rb": [
         1,
@@ -818,6 +828,6 @@
         null
       ]
     },
-    "timestamp": 1513876943
+    "timestamp": 1513877364
   }
 }
