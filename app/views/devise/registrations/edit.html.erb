@@ -1,87 +1,115 @@
-<div class=" card col-md-4">
-  <h3>Edit Account Info: <%= current_user.username %></h3>
-  <hr>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="row">
+  <div class=" card col-md-4">
+    <h3>Edit Account Info: <%= current_user.username %></h3>
+    <hr>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="form-group">
-    <%= f.label :username, class: 'control-label'  %>
-    <%= f.text_field :username, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :username, class: 'control-label'  %>
+      <%= f.text_field :username, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :name, class: 'control-label'  %>
-    <%= f.text_field :name, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name, class: 'control-label'  %>
+      <%= f.text_field :name, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :email, class: 'control-label'  %>
-    <%= f.email_field :email, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :email, class: 'control-label'  %>
+      <%= f.email_field :email, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :home_country, class: 'control-label'  %>
-    <%= f.text_field :home, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :home_country, class: 'control-label'  %>
+      <%= f.text_field :home, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :age, class: 'control-label'  %>
-    <%= f.number_field :age, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :age, class: 'control-label'  %>
+      <%= f.number_field :age, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :years_of_experience, class: 'control-label'  %>
-    <%= f.number_field :experience, class: 'form-control formBack'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :years_of_experience, class: 'control-label'  %>
+      <%= f.number_field :experience, class: 'form-control formBack'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :brief_description, class: 'control-label'  %>
-    <%= f.text_area :detail, class: 'formBack form-control'  %>
-  </div>
+    <div class="form-group">
+      <%= f.label :brief_description, class: 'control-label'  %>
+      <%= f.text_area :detail, class: 'formBack form-control'  %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :avatar, class: 'control-label'  %>
-    <%= f.file_field :avatar %>
-  </div>
-  <br>
-  <div class="form-group">
-    <% options = ['Crew', 'Captain'] %>
-    <%= f.select :account_type,  options %>
-  </div>
-  <br>
-  <div class="field">
-    <% options = ['Available', 'Busy'] %>
-    <%= f.select :available,  options %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= f.label :password, class: 'control-label'  %>
-    <i>(leave blank if not changing)</i>
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control formBack' %>
-  </div>
+    <div class="form-group">
+      <%= f.label :avatar, class: 'control-label'  %>
+      <%= f.file_field :avatar %>
+    </div>
+    <br>
+    <div class="form-group">
+      <% options = ['Crew', 'Captain'] %>
+      <%= f.select :account_type,  options %>
+    </div>
+    <br>
+    <div class="field">
+      <% options = ['Available', 'Busy'] %>
+      <%= f.select :available,  options %>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :password, class: 'control-label'  %>
+      <i>(leave blank if not changing)</i>
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control formBack' %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :password_confirmation, class: 'control-label' %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control formBack' %>
-  </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: 'control-label' %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control formBack' %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :current_password, class: 'control-label' %>
-    <i>(required)</i>
-    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control formBack' %>
-  </div>
+    <div class="form-group">
+      <%= f.label :current_password, class: 'control-label' %>
+      <i>(required)</i>
+      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control formBack' %>
+    </div>
 
-  <div class="form-group">
-    <div class="actions">
-      <%= f.submit "Update", class: "btn btn-info" %>
+    <div class="form-group">
+      <div class="actions">
+        <%= f.submit "Update", class: "btn btn-info" %>
+      </div>
+    </div>
+
+    <% end %>
+    <hr>
+    <h3>Cancel my account</h3>
+
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+
+    <%= link_to "Back", :back %>
+  </div>
+  <div class="col-md-7">
+    <div class="card">
+      <h3>Detail Page Preview:</h3>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <h4><%= current_user.name %></h4>
+          <div class="userDetEdit">
+            <%= image_tag(current_user.avatar.url(:medium)) %>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <p>Description:</p>
+          <p><%= current_user.detail %></p>
+          <br>
+          <h5>About Me:</h5>
+          <p>Home Country: <%= current_user.home %></p>
+          <p>Age: <%= current_user.age %></p>
+          <p>Years of Experience: <%= current_user.experience %></p>
+          <p>Username: <%= current_user.username %></p>
+          <p>Availability: <%= current_user.available %></p>
+          <p>Acount Type: <%= current_user.account_type %></p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <% end %>
-  <hr>
-  <h3>Cancel my account</h3>
-
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
-
-  <%= link_to "Back", :back %>
 </div>
