@@ -18,6 +18,14 @@ class User < ApplicationRecord
     where.not(id: current_user)
   }
 
+  scope :all_available_crew, -> {
+    where(:account_type => 'Crew', :available => 'Available')
+  }
+
+  scope :all_available_captains, -> {
+    where(:account_type => 'Captain', :available => 'Available')
+  }
+
   scope :search, -> (search_parameter) {
     where("lower(home) like lower(?) OR lower(name) like lower(?) OR lower(username) like lower(?) OR lower(detail) like lower(?)", "%#{search_parameter}%", "%#{search_parameter}%", "%#{search_parameter}%", "%#{search_parameter}%")
   }
