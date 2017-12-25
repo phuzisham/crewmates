@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
+
+  resources :forums do
+    resources :forum_messages
+  end
 end
