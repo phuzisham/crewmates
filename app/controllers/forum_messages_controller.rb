@@ -2,7 +2,7 @@ class ForumMessagesController < ApplicationController
   def create
     @forum = Forum.find(params[:forum_id])
     x = params[:forum_message]
-    @message = ForumMessage.new(user_id: x[:user_id], forum_id: params[:forum_id], title: x[:title], body: x[:body])
+    @message = ForumMessage.new(user_id: x[:user_id], forum_id: @forum.id, title: x[:title], body: x[:body])
     if @message.save
       respond_to do |format|
         format.html { redirect_to forums_path(@forum) }

@@ -5,6 +5,7 @@ class ForumsController < ApplicationController
 
   def show
     @forum = Forum.find(params[:id])
+    @user = User.find(@forum.user_id)
     @messages = @forum.forum_messages
     @message = ForumMessage.new(message_params)
   end
