@@ -1,0 +1,15 @@
+<% if @messages.any? %>
+  <div class="card">
+    <h4><li><%= @forum.title %></li></h4>
+    <hr>
+    <% @messages.each do |m| %>
+      <div class="row">
+        <div class="col-md-9">
+          <li><%= m.title %></li>
+          <li><%= m.body %></li>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+<% end %>

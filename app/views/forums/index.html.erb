@@ -1,0 +1,15 @@
+<% if @forums.any? %>
+  <div class="card">
+    <h4>Forums:</h4>
+    <hr>
+    <% @forums.each do |f| %>
+      <div class="row">
+        <div class="col-md-9">
+          <li><%= link_to f.title, :controller => "forums", :action => "show", :id => f.id %></li>
+          <li><%= f.description %></li>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+<% end %>
