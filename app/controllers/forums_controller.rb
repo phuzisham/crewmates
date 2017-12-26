@@ -6,5 +6,11 @@ class ForumsController < ApplicationController
   def show
     @forum = Forum.find(params[:id])
     @messages = @forum.forum_messages
+    @message = ForumMessage.new(message_params)
+  end
+
+  private
+  def message_params
+    params.permit(:user_id, :forum_id, :title, :body)
   end
 end
